@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Search Results</title>
+</head>
+<body>
+    {% if image_url %}
+        <img src="{{ image_url }}" alt="Image">
+    {% else %}
+        <p>No image found for the given ID</p>
+    {% endif %}
+    <h2>Captions From LaBERT:</h2>
+    <ul>
+        <li>Level 1: {{ caption_1 }}</li>
+        <li>Level 2: {{ caption_2 }}</li>
+        <li>Level 3: {{ caption_3 }}</li>
+        <li>Level 4: {{ caption_4 }}</li>
+    </ul>
+    <h2>Original Captions:</h2>
+    <ul>
+        <li>{{ original_1 }}</li>
+        <li>{{ original_2 }}</li>
+        <li>{{ original_3 }}</li>
+        <li>{{ original_4 }}</li>
+    </ul>
+</body>
+</html>
